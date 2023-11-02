@@ -106,30 +106,37 @@ function App() {
             />
           </div>
         ))}
-        <div className="w-48 h-48 mt-4 border rounded-lg">
-          {/* Image uploader input */}
-          <label>
-            <BiPhotoAlbum className="text-5xl mx-auto mt-12" />
-            <h1 className="mt-2 text-lg font-bold">Image Uploader</h1>
+        {/* Image uploader input */}
+        <label>
+          <div className="w-48 h-48 mt-4 border rounded-lg cursor-pointer">
+            <BiPhotoAlbum className="text-5xl mx-auto mt-12 cursor-pointer" />
+            <h1 className="mt-2 text-lg font-bold cursor-pointer">
+              Image Uploader
+            </h1>
             <input
               type="file"
               accept="image/*"
               hidden
               onChange={handleImageUpload}
             />
-          </label>
-        </div>
+          </div>
+        </label>
 
         {/* Delete selected images button */}
         {selectedImages.length > 0 && (
-          <div className="w-48 h-48 mt-4 border border-red-500 ml-4 rounded-lg">
-            <button onClick={handleDelete}>
-              <AiFillDelete className="text-5xl mx-auto mt-12 text-red-500" />
-              <h3 className="mt-2 text-lg font-bold text-red-500">
-                Delete Selected
-              </h3>
-            </button>
-          </div>
+          <label>
+            <div className="w-48 h-48 mt-4 border border-red-500 ml-4 rounded-lg cursor-pointer">
+              <button onClick={handleDelete}>
+                <AiFillDelete
+                  className="text-5xl mx-auto mt-12 text-red-500"
+                  cursor-pointer
+                />
+                <h3 className="mt-2 text-lg font-bold text-red-500 cursor-pointer">
+                  Delete Selected
+                </h3>
+              </button>
+            </div>
+          </label>
         )}
       </div>
     </div>
