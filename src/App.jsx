@@ -108,10 +108,10 @@ function App() {
         ))}
         {/* Image uploader input */}
         <label>
-          <div className="w-48 h-48 mt-4 border rounded-lg cursor-pointer">
+          <div className="w-48 h-48 mt-4 border rounded-lg cursor-pointer mx-auto">
             <BiPhotoAlbum className="text-5xl mx-auto mt-12 cursor-pointer" />
             <h1 className="mt-2 text-lg font-bold cursor-pointer">
-              Image Uploader
+              Upload Image
             </h1>
             <input
               type="file"
@@ -125,7 +125,7 @@ function App() {
         {/* Delete selected images button */}
         {selectedImages.length > 0 && (
           <label>
-            <div className="w-48 h-48 mt-4 border border-red-500 ml-4 rounded-lg cursor-pointer">
+            <div className="w-48 h-48 mt-4 border border-red-500 mx-auto rounded-lg cursor-pointer">
               <button onClick={handleDelete}>
                 <AiFillDelete
                   className="text-5xl mx-auto mt-12 text-red-500"
